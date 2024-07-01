@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* UTF-8一定要在行數1 */
+/* 重置所有標籤的樣式 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* 不累加內距與邊框 */
+}
+
+/* 重置字體 */
+body {
+	font-family:
+		/*西文*/
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+		/*中文*/
+		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	background-color: rgb(183, 208, 177);
+	/* background-image: url(../images/banner_2.jpg);
+	background-clip: padding-box ;{
+		width: 250px;
+		height: 200px;
+	} */
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+	list-style: none;
+}
+
+/* 重置圖片 */
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 重置連接 */
+a {
+
+	display: block;
+	/* 將預設 inline 改為 block */
+	text-decoration: none;
+}
+
+/* 頁首區 */
+#topbar {
+	/* 預設主軸為水平 */
+	display: flex;
+	/* 主軸均分貼齊頭尾 */
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px;
+}
+
+.logo {
+	/* 相對於父元素 */
+	width: 50px;
+}
+
+.navigation {
+	display: flex;
+	/* 主軸垂直 */
+	flex-direction: column;
+	/* 副軸靠左 */
+	align-items: flex-end;
+}
+
+.navigation .icon a {
+	width: 35px;
+	height: 35px;
+	/* border: solid none; */
+	margin-left: 10px;
+	transition: all .35s ease-in-out;
+}
+
+.navigation .icon {
+	display: flex;
+}
+
+.navigation .menu {
+	display: flex;
+	margin: 15px 0;
+}
+
+.navigation .menu a {
+	color: #444;
+	margin: 0 10px;
+	border-bottom: solid 4px transparent;
+	font-style: italic;
+		
+}
+
+.navigation .menu a:hover {
+	/* border-bottom: solid 4px #444; */
+	transition: 1s ease-in-out;
+	color: rgb(183,207,177);
+	background-color: #444;
+	
+}
+
+/* 只有svg圖檔會自動等比例縮放,其他圖檔會維持原始比例裁切 */
+/* 用其他圖檔要加 background-size: 100%; */
+.icon-fb {
+	background-image: url(../images/icon-fb.svg);
+}
+
+.icon-fb:hover {
+	background-image: url(../images/icon-fb-hover.svg);
+}
+
+.icon-ig {
+	background-image: url(../images/icon-ig.svg);
+}
+
+.icon-ig:hover {
+	background-image: url(../images/icon-ig-hover.svg);
+}
+
+.icon-line {
+	background-image: url(../images/icon-line.svg);
+}
+
+.icon-line:hover {
+	background-image: url(../images/icon-line-hover.svg);
+}
