@@ -14,7 +14,8 @@ body {
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     font-size: 100%;
     line-height: 1.5;
-    background-color: #ccc;
+    background-color: #f0f0f0;
+
 }
 
 ul,
@@ -34,59 +35,67 @@ a {
     text-decoration: none;
 }
 
-.logo {
-    display: block;
-}
-
 #topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 120px;
+    padding: 30px 70px;
+}
+
+.logo {
+    display: block;
 }
 
 .navigation {
     display: flex;
+    margin: 30px;
 }
 
 .navigation .menu {
     display: flex;
-    margin: 15px 0;
+    margin-left: auto;
+    padding: 1rem;
 }
 
 .navigation .menu a {
-    margin: 15px 40px;
-    color: #000000;
+    margin: 8px 20px 8px;
+    color: #000112;
+    font-size: .9rem;
 }
 
 .navigation .menu a:hover {
     color: #999;
-    transition: 1s ease-in-out;
+    transition: .35s ease-in-out;
 }
 
 .navigation .btn {
     display: flex;
+    margin-left: 50px;
     border: solid rgb(165, 110, 42) 1px;
+    border-radius: 2px;
     width: auto !important;
 }
 
 .navigation .btn a {
-    color:rgb(165, 110, 42);
-    margin: 15px 20px;
-    transition: 1s ease-in-out;
+    color: rgb(165, 110, 42);
+    font-size: .75rem;
 }
 
-.navigation .btn li{
-    padding: 0 20px;
+.navigation .btn li {
+margin: 0 10px;
 }
 
-.navigation .btn li:hover {
-    transition: 1s ease-in-out;
+.navigation .btn:hover {
     background-color: rgb(165, 110, 42);
+    transition: .35s ease-in-out;
 }
 
-
-.navigation .btn li:hover a {
+.navigation .btn a:hover {
     color: #ffffff;
-    transition: 1s ease-in-out;
+    transition: .35s ease-in-out;
+}
+
+.arrow {
+    display: block;
+
 }
