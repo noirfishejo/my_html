@@ -55,7 +55,7 @@ a {
 }
 
 .navigation .menu a {
-    margin: 15px 30px;
+    margin: 15px 40px;
     color: #000000;
 }
 
@@ -68,12 +68,12 @@ a {
     display: flex;
     border: solid rgb(165, 110, 42) 1px;
     width: auto !important;
-    
 }
 
 .navigation .btn a {
     color:rgb(165, 110, 42);
-    margin: 15px 30px;
+    margin: 15px 20px;
+    transition: 1s ease-in-out;
 }
 
 .navigation .btn li{
@@ -87,7 +87,6 @@ a {
 
 
 .navigation .btn li:hover a {
-    
     color: #ffffff;
-
+    transition: 1s ease-in-out;
 }
