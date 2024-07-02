@@ -52,10 +52,27 @@ img {
 
 /* 重置連接 */
 a {
-
 	display: block;
 	/* 將預設 inline 改為 block */
 	text-decoration: none;
+	color: #444;
+}
+
+
+/* 共用區 */
+.btn-s {
+	background-color: rgb(255, 255, 255);
+	width: auto !important;
+	height: 35px;
+	line-height: 30px;
+	padding: 0 20px;
+	border-radius: 30px;
+}
+
+.btn-s:hover {
+	background-color:#444;
+	color: #ffffff;
+	transition: 1s ease-in-out;
 }
 
 /* 頁首區 */
@@ -64,13 +81,13 @@ a {
 	display: flex;
 	/* 主軸均分貼齊頭尾 */
 	justify-content: space-between;
-	align-items: center;
+	align-items: top;
 	padding: 30px;
 }
 
 .logo {
 	/* 相對於父元素 */
-	width: 50px;
+	width: 60px;
 }
 
 .navigation {
@@ -95,23 +112,32 @@ a {
 
 .navigation .menu {
 	display: flex;
-	margin: 15px 0;
+	margin: 15px 0 0; /* 控制父層外距 */
+}
+
+.navigation .menu li {
+	border-right: solid 1px #444;
+}
+
+.navigation .menu li:last-child {
+	border-right: none;
 }
 
 .navigation .menu a {
-	color: #444;
-	margin: 0 10px;
-	border-bottom: solid 4px transparent;
-	font-style: italic;
+	/* color: #444; */
+	font-size: .8rem;
+	line-height: 1;
+	margin: 0 30px;
+	border-bottom: solid 2px transparent;
+	/* font-style: italic; */
 		
 }
 
 .navigation .menu a:hover {
-	/* border-bottom: solid 4px #444; */
+	border-bottom: solid 2px #444;
 	transition: 1s ease-in-out;
-	color: rgb(183,207,177);
-	background-color: #444;
-	
+	/* color: rgb(183,207,177);
+	background-color: #444; */	
 }
 
 /* 只有svg圖檔會自動等比例縮放,其他圖檔會維持原始比例裁切 */
