@@ -25,7 +25,7 @@ body {
 		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(214, 217, 249);
 	/* background-image: url(../images/banner_2.jpg);
 	background-clip: padding-box ;{
 		width: 250px;
@@ -65,7 +65,6 @@ a {
 	color: #444;
 }
 
-
 /* 共用區 */
 .btn-s {
 	background-color: rgb(255, 255, 255);
@@ -99,6 +98,10 @@ a {
 	width: 65px;
 }
 
+/* .logo img {
+	filter: drop-shadow(2px 3px rgba(255, 255, 255, 0.6));
+} */
+
 .navigation {
 	display: flex;
 	/* 主軸垂直 */
@@ -110,6 +113,7 @@ a {
 .navigation .icon {
 	display: flex;
 }
+
 .navigation .icon a {
 	width: 35px;
 	height: 35px;
@@ -148,6 +152,8 @@ a {
 	display: flex;
 	margin: 15px 0;
 	/* 控制父層外距 */
+	padding: 10px;
+	border-radius: 99px;
 }
 
 .navigation .menu li {
@@ -159,19 +165,21 @@ a {
 }
 
 .navigation .menu a {
-	/* color: #444; */
+	color: #444;
 	font-size: .9rem;
 	line-height: 1;
-	margin: 0 20px;	/* 控制子層的外距 */
+	margin: 0 20px;
+	padding: 2px;
+	/* 控制子層的外距 */
 	border-bottom: solid 2px transparent;
 	/* font-style: italic; */
 
 }
 
 .navigation .menu a:hover {
-	border-bottom: solid 2px #444;
+	border-bottom: solid 1px #444;
 	transition: .35s ease-in-out;
-	/* color: rgb(183,207,177);
+	/* color: rgb(255, 255, 255);
 	background-color: #444; */
 }
 
@@ -195,7 +203,7 @@ section {
 	font-weight: bold;
 	font-size: 3rem;
 	letter-spacing: .1rem;
-	border-bottom: 3px solid #444 ;
+	border-bottom: 3px solid #444;
 	color: #444;
 	margin-bottom: 10px;
 }
@@ -209,8 +217,9 @@ section {
 	color: #444;
 	line-height: 2.5rem;
 }
+
 /* 聯絡我們區S */
-#contact{
+#contact {
 	/* position: relative; */
 	background-image: url(../images/bg_contact.jpg);
 	background-size: cover;
@@ -221,34 +230,148 @@ section {
 }
 
 #form--contact {
+	font-family: "Noto Sans TC", sans-serif;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;  /* 主軸(垂直) */
+	align-items: center; /* 副軸(水平)置中 */
 	width: 25%;
 }
+
 #form--contact label {
-	font-size: .85rem;
+	font-size: .9rem;
+	font-weight: bold;
 	line-height: 2;
 	margin-top: 1rem;
+	color: #444;
+	width: 100%;
 }
 
-#form--contact input, #form--contact textarea {
+
+#form--contact input,
+#form--contact textarea {
+	width: 100%;
 	padding: 10px;
-	color: #8f6b6d;
+	color: #313131;
 	font-weight: 600;
+	font-size: .9rem;
+	/* font-family: "Noto Sans TC", sans-serif; */
+	border-radius: 10px;
+	/* 取消表單元件的預設背景色 */
+	background-color: transparent;
 	border: none;
-	border-radius: 4px;
 }
 
-#form--contact input::placeholder, #form--contact textarea::placeholder  {
+#form--contact input:focus,
+#form--contact textarea:focus {
+	outline: 2px solid rgb(240, 231, 231);
+}
+
+#form--contact input::placeholder,
+#form--contact textarea::placeholder {
 	font-size: .8rem;
 	font-weight: 400;
-	color: #d1babb;
+	color: #787a81;
 }
 
 #form--contact small {
 	font-size: .8rem;
-	color: #605555;
+	color: #313131;
 	padding: 15px 5px;
 }
 
+/* 動態按鈕 */
+/* button#btn__contact--submit {
+	
+} */
+#btn__contact--submit {
+	
+	position: relative;
+	outline: none;
+	text-decoration: none;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	height: 40px;
+	width: 40%;
+	opacity: 1;
+	background-color: transparent;
+	border: none;
+}
 
+#btn__contact--submit span {
+	color: #444;
+	font-size: .9rem;
+	font-weight: bold;
+	letter-spacing: 0.7px;
+}
+
+#btn__contact--submit:hover {
+	animation: rotate 0.7s ease-in-out both;
+	border: 1px solid white;
+}
+
+#btn__contact--submit:hover span {
+	animation: storm 0.7s ease-in-out both;
+	animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg) translate3d(0, 0, 0);
+	}
+
+	25% {
+		transform: rotate(3deg) translate3d(0, 0, 0);
+	}
+
+	50% {
+		transform: rotate(-3deg) translate3d(0, 0, 0);
+	}
+
+	75% {
+		transform: rotate(1deg) translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: rotate(0deg) translate3d(0, 0, 0);
+	}
+}
+
+@keyframes storm {
+	0% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+
+	25% {
+		transform: translate3d(4px, 0, 0) translateZ(0);
+	}
+
+	50% {
+		transform: translate3d(-3px, 0, 0) translateZ(0);
+	}
+
+	75% {
+		transform: translate3d(2px, 0, 0) translateZ(0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0) translateZ(0);
+	}
+}
+
+#form--contact input,
+#form--contact textarea,
+#topbar .menu,
+#btn__contact--submit {
+	/* 玻璃擬態效果 */
+	background-image:
+		linear-gradient(120deg, rgba(255, 255, 255, 0.5) 10%,
+			rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+	box-shadow:
+		0 2px 5px rgba(182, 182, 203, 0.741),
+		inset -1px 0 3px rgb(240, 231, 231);
+	backdrop-filter: blur(5px);
+}
