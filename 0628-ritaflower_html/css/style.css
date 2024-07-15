@@ -25,7 +25,7 @@ body {
 		"蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	background-color: rgb(196, 214, 245);
+	/* background-color: rgb(196, 214, 245); */
 	/* background-image: url(../images/banner_2.jpg);
 	background-clip: padding-box ;{
 		width: 250px;
@@ -85,6 +85,12 @@ a {
 
 /* 頁首區 */
 #topbar {
+	/* position > display */
+	/* 固定定位，不會跟著捲軸走 */
+	position: fixed;
+	z-index: 999;
+	/* 定位會變成抓內容尺寸，需手動設定回 w100% */
+	width: 100%;
 	/* 預設主軸為水平 */
 	display: flex;
 	/* 主軸均分貼齊頭尾 */
@@ -196,6 +202,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 30px;
 }
 
 .title h2 {
@@ -218,16 +225,57 @@ section {
 	line-height: 2.5rem;
 }
 
-/* 聯絡我們區S */
+.box__list {
+	width: 80%;
+	display: flex;
+}
+
+.box__list .item {
+	flex: 1;
+	margin: 0 15px;
+}
+
+.box__list h1{
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+.box__list p {
+	font-size: .9rem;
+	text-align: justify; /* 齊行：建議中文再使用，英文會造成單字間距均分 */
+}
+/* 最新消息區 */
+
+
+/* 聯絡我們區 */
 #contact {
-	/* position: relative; */
+	position: relative;	/* 專門做為 absolute 的定位依據 */
+	overflow: hidden;
+	/* 背景影像基本設定 */
 	background-image: url(../images/bg_contact.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 	/* 固定背景 */
+	background-attachment: fixed;
 }
+
+/* 裝飾花花 */
+.flower_r {
+	position: absolute;	/* 絕對定位 */
+	left: -60px;
+	bottom: -100px;
+	width: 300px;
+	transform: rotate(15deg);
+}
+
+.flower_w {
+	position: absolute;	/* 絕對定位 */
+	right: -50px;
+	top: 150px;
+	width: 300px;
+	transform: rotate(-35deg);
+}
+
 
 #form--contact {
 	font-family: "Noto Sans TC", sans-serif;
