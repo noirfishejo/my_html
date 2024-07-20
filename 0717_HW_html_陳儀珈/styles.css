@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sora', 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 2.3;
+    letter-spacing: 1.1px;
+    color: #111;
+    font-weight: 500;
+    background-color: #f0f0f0;
+    margin: 50px 100px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: flex;
+    width: auto;
+    height: 30vh;
+}
+
+figure {
+    display: flex;
+    margin: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #111;
+    border: none;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.box__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+h2 {
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
+
+h3 {
+    font-size: .8rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 296px;
+}
+
+small {
+    line-height: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
