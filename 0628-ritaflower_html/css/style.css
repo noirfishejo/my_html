@@ -11,37 +11,106 @@
 /* 變數 */
 :root {
 	/* 灰階 */
-	--deep:#444;
+	--deep: #444;
 	--gray: #999;
-	--light:#e0dada;
-	--white:rgba(255,255,255);
+	--light: #e0dada;
+	--white: rgba(255, 255, 255);
 
 	/* 背景 */
-	--primary:#f2edf0;
-	--secondary:#e6ece5;
-	--tertirary:#ecf0f4;
+	--primary: #f2edf0;
+	--secondary: #e6ece5;
+	--tertirary: #ecf0f4;
 
 	/* 輔助 */
-	--lesser-1:#f3e4e4;
-	--lesser-2:#efdbdb;
-	--lesser-3:#cdaaab;
-	--lesser-4:#8f6b6d;
+	--lesser-1: #f3e4e4;
+	--lesser-2: #efdbdb;
+	--lesser-3: #cdaaab;
+	--lesser-4: #8f6b6d;
 
 	/* 透明 */
-	--alpha-w-40: rgba(255,255,255, 0.4);
-	--alpha-w-60: rgba(255,255,255, 0.6);
-	--alpha-b-20: rgba(0,0,0, 0.2);
-	--alpha-b-40: rgba(0,0,0, 0.4);
-	--alpha-b-60: rgba(0,0,0, 0.6);
-	--alpha-r-20: rgba(220,185,185, 0.2);
-	--alpha-r-60: rgba(220,185,185, 0.6);
-	
+	--alpha-w-40: rgba(255, 255, 255, 0.4);
+	--alpha-w-60: rgba(255, 255, 255, 0.6);
+	--alpha-b-20: rgba(0, 0, 0, 0.2);
+	--alpha-b-40: rgba(0, 0, 0, 0.4);
+	--alpha-b-60: rgba(0, 0, 0, 0.6);
+	--alpha-r-20: rgba(220, 185, 185, 0.2);
+	--alpha-r-40: rgba(220, 185, 185, 0.4);
+	--alpha-r-60: rgba(220, 185, 185, 0.6);
+
 	/* 漸層 */
-	--gradient: rgba(255,255,255, 0.15), rgba(255,255,255, 0.5);
+	--gradient: rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.5);
 
 	/* 陰影 */
-	box-shadow: 2px 2px 3px rgba(0,0,0, .15),
-	inset -1px -1px rgba(255,255,255, 0.8); 
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, .15),
+		inset -1px -1px rgba(255, 255, 255, 0.8);
+}
+
+/* 捲軸樣式 */
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+	height: 15px;
+}
+
+::-webkit-scrollbar-button {
+	width: 15px;
+	height: 15px;
+	background-color: var(--alpha-b-20);
+}
+
+::-webkit-scrollbar-button:hover {
+	background: var(--alpha-b-40);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 5px var(--alpha-b-20); */
+	background-color: var(--white);
+	border-radius: 0px;
+}
+
+/* 垂直與水平捲軸交界的角落 */
+::-webkit-scrollbar-corner {
+	background-color: transparent
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--alpha-b-20);
+	border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: var(--alpha-b-40);
+}
+
+/* 多行文字欄位右下角的縮放鈕 */
+::-webkit-resizer {
+	background-color: #ecf0f4;
+}
+
+/* 區塊捲軸樣式 */
+#about p::-webkit-scrollbar-thumb  {
+	border-radius: 99px;
+	background-color: var(--lesser-1);
+}
+
+#about p::-webkit-scrollbar-thumb:hover  {
+	background-color: var(--lesser-3);
+}
+
+#about p::-webkit-scrollbar-track  {
+	background: var(--alpha-r-40);
+	border-radius: 99px;
+}
+
+#about p::-webkit-scrollbar-button  {
+	display: none;
+}
+
+#about p::-webkit-scrollbar-corner  {
+	border-radius: 50%;
 }
 
 /* 重置所有標籤的樣式 */
@@ -263,7 +332,8 @@ section {
 
 .box__list {
 	width: 80%;
-	max-width: 1400px; 				/* 通常搭配相對單位，設定絕對單位 */
+	max-width: 1400px;
+	/* 通常搭配相對單位，設定絕對單位 */
 	display: flex;
 }
 
@@ -276,11 +346,13 @@ section {
 }
 
 .box__list figure {
-	height: 35vh;		/* 設定圖片齊高，沒設定的話會自動抓內容尺寸 */
+	height: 35vh;
+	/* 設定圖片齊高，沒設定的話會自動抓內容尺寸 */
 }
 
 .box__list img {
-	object-fit: cover; 	/* 會自動置中 */
+	object-fit: cover;
+	/* 會自動置中 */
 	/* width: 100%; 共用區段已設定*/
 	height: 100%;
 }
@@ -302,7 +374,7 @@ section {
 
 
 /* 最新消息區 */
-#news{
+#news {
 	background-color: var(--primary);
 }
 
@@ -318,10 +390,14 @@ section {
 #news p {
 	/* 多行省略 */
 	overflow: hidden;
-	text-overflow: ellipsis;		/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
-	display: -webkit-box;			/* 彈性布局 */
-	-webkit-box-orient: vertical;	/* 定義垂直布局 */
-	-webkit-line-clamp: 5;			/* 限制行數上限 */
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	display: -webkit-box;
+	/* 彈性布局 */
+	-webkit-box-orient: vertical;
+	/* 定義垂直布局 */
+	-webkit-line-clamp: 5;
+	/* 限制行數上限 */
 }
 
 /* 服務項目區 */
@@ -332,18 +408,19 @@ section {
 #service p {
 	/* 單行省略 */
 	overflow: hidden;
-	text-overflow: ellipsis;		/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
+	text-overflow: ellipsis;
+	/* 文字溢出時出現省略號，若有設定line-clamp，瀏覽器會自動加入 */
 	white-space: nowrap;
 }
 
 #service a {
 	/* width: 100%;	父元素display的flex若為row，寬度會自動抓內容尺寸，就需手動寫回w100% */
 	color: var(--light);
-	background-color:var(--alpha-b-40);
+	background-color: var(--alpha-b-40);
 	transition: .4s ease-in-out;
 }
 
-#service a:hover{
+#service a:hover {
 	background-color: var(--alpha-b-60);
 	color: var(--lesser-1);
 	cursor: pointer;
@@ -352,68 +429,91 @@ section {
 #service .item {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;	/* 內容物對齊 */
-	height: 65vh;					/* 視窗的65%，此處不可寫百分比，因為會根據item的高度設定 */
+	justify-content: flex-end;
+	/* 內容物對齊 */
+	height: 65vh;
+	/* 視窗的65%，此處不可寫百分比，因為會根據item的高度設定 */
 	background-position: center top;
 	background-size: cover;
 }
 
-.svc-1{
+.svc-1 {
 	background-image: url(../images/pt_svc1.jpg);
 }
 
-.svc-2{
+.svc-2 {
 	background-image: url(../images/pt_svc2.jpg);
 }
 
-.svc-3{
+.svc-3 {
 	background-image: url(../images/pt_svc3.jpg);
 }
 
-.svc-4{
+.svc-4 {
 	background-image: url(../images/pt_svc4.jpg);
 }
 
 /* 相關影片區 */
 /* id */
-#video{
+#video {
 	background-color: var(--tertirary);
 }
+
 /* class */
-.video{
+.video {
 	width: 65%;
 	max-width: 1050px;
 }
 
 /* div */
-video{
+video {
 	width: 100%;
 }
 
 /* 關於我們區 */
+#about {
+	position: relative;
+	background-color: var(--lesser-2);
+}
+
+#about video {
+	/* 影像自動剪裁，一定要搭配寬高100% */
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: overlay;
+	filter: brightness(120%) contrast(70%);
+}
+
 #about .content {
+	position: absolute;
+	z-index: 1;
 	width: 65%;
-	height: 100%;/* 高度相對父元素的高度 */
-	background-color: var(--alpha-r-60);
+	height: 100%;
+	/* 高度相對父元素的高度 */
+	background-color: var(--alpha-r-40);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	backdrop-filter: blur(3px);
 }
 
-#about  p{
-
+#about p {
+	padding-right: 5rem;
+	padding-bottom: 2rem;
 	height: 65vh;
+	/* overflow: scroll; */
 	overflow: auto;
 	width: 80%;
-
 }
 
 /* 聯絡我們區 */
 #contact {
 	position: relative;
 	/* 專門做為 absolute 的定位依據 */
-	overflow: hidden;				/* clip 會直接把多餘的剪裁，不能拿來做編程動態 */
+	overflow: hidden;
+	/* clip 會直接把多餘的剪裁，不能拿來做編程動態 */
 	/* 背景影像基本設定 */
 	background-image: url(../images/bg_contact.jpg);
 	background-size: cover;

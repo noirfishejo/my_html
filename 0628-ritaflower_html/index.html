@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rita-Flower-html5web</title>
     <link rel="icon" href="./favicon.ico">
+    <!-- 自訂css -->
     <link rel="stylesheet" href="./css/style.css">
-
+    <!-- 換圖輪播css -->
+    <link rel="stylesheet" href="./css/carousel.css">
 </head>
 
 <body>
@@ -39,7 +41,62 @@
         </nav>
     </header>
     <main>
-        <section id="banner"></section>
+        <!-- 換圖輪播區 -->
+        <section id="section-1">
+            <div class="content-slider">
+                <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+                <input type="radio" id="banner2" class="sec-1-input" name="banner">
+                <input type="radio" id="banner3" class="sec-1-input" name="banner">
+                <input type="radio" id="banner4" class="sec-1-input" name="banner">
+                <div class="slider">
+                    <div id="top-banner-1" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Creative Template</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-2">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-2" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>What We Do</h2>
+                            <h1>Great<br>MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-4">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-3" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Here We Are</h2>
+                            <h1>We Are<br>MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#section-6">Learn More</a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-4" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Our Contacts</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="controls">
+                        <label for="banner1"><span class="progressbar"><span
+                                    class="progressbar-fill"></span></span><span>01</span> Intro</label>
+                        <label for="banner2"><span class="progressbar"><span
+                                    class="progressbar-fill"></span></span><span>02</span> Work</label>
+                        <label for="banner3"><span class="progressbar"><span
+                                    class="progressbar-fill"></span></span><span>03</span> About</label>
+                        <label for="banner4"><span class="progressbar"><span
+                                    class="progressbar-fill"></span></span><span>04</span> Contacts</label>
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- 最新消息區 -->
         <section id="news">
             <header class="title">
                 <h2>NEWS</h2>
@@ -153,7 +210,9 @@
                 <video src="./images/Planter.mp4" poster="./images/cover.jpg" controls></video>
             </div>
         </section>
+        <!-- 關於我們區 -->
         <section id="about">
+            <!-- 內容區 -->
             <div class="content">
                 <header class="title">
                     <h2>ABOUT</h2>
@@ -240,6 +299,9 @@
                     eius ipsam architecto veniam explicabo, ipsa ipsum? At illo exercitationem voluptatibus minus
                     nostrum quidem repellendus dolor veniam?</p>
             </div>
+            <!-- 背景影片 -->
+            <!-- video無法使用css設定為背景，一定要存在於HTML中 -->
+            <video src="./images/flower.mp4" autoplay muted loop></video>
         </section>
         <section id="contact">
             <header class="title">
@@ -274,6 +336,11 @@
 
     </footer>
 
-</body>
+    <!-- jquery官方CDN，先載入jquery原始碼，讓瀏覽器看懂，只能選一個版本使用，不可重複使用 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- 換圖輪播js，必須放在jquery連結下方 -->
+    <script src="./Js/carousel.js"></script>
+
+</body >
 
 </html>
