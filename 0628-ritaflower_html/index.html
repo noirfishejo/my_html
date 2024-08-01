@@ -42,12 +42,15 @@
     </header>
     <main>
         <!-- 換圖輪播區 -->
-        <section id="section-1">
+        <section id="banner">
             <div class="content-slider">
+                <!-- js切換圖片區 -->
                 <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
                 <input type="radio" id="banner2" class="sec-1-input" name="banner">
                 <input type="radio" id="banner3" class="sec-1-input" name="banner">
                 <input type="radio" id="banner4" class="sec-1-input" name="banner">
+                <input type="radio" id="banner5" class="sec-1-input" name="banner">
+                <!-- 輪播圖區 -->
                 <div class="slider">
                     <div id="top-banner-1" class="banner">
                         <div class="banner-inner-wrapper">
@@ -81,17 +84,55 @@
                             <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
                         </div>
                     </div>
+                    <div id="top-banner-5" class="banner">
+                        <div class="banner-inner-wrapper">
+                            <h2>Our Contacts</h2>
+                            <h1>Welcome<br>to MoGo</h1>
+                            <div class="line"></div>
+                            <div class="learn-more-button"><a href="#main-footer">Learn More</a></div>
+                        </div>
+                    </div>
                 </div>
+                <!-- 輪播進度條 -->
                 <nav>
                     <div class="controls">
-                        <label for="banner1"><span class="progressbar"><span
-                                    class="progressbar-fill"></span></span><span>01</span> Intro</label>
-                        <label for="banner2"><span class="progressbar"><span
-                                    class="progressbar-fill"></span></span><span>02</span> Work</label>
-                        <label for="banner3"><span class="progressbar"><span
-                                    class="progressbar-fill"></span></span><span>03</span> About</label>
-                        <label for="banner4"><span class="progressbar"><span
-                                    class="progressbar-fill"></span></span><span>04</span> Contacts</label>
+                        <!-- <label for="banner1">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                            <span>01</span> Intro
+                        </label> -->
+                        <label for="banner1">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                        </label>
+                        <label for="banner2">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                        </label>
+                        <label for="banner3">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                        </label>
+                        <label for="banner4">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                        </label>
+                        <label for="banner5">
+                            <span class="progressbar">
+                                <span class="progressbar-fill">
+                                </span>
+                            </span>
+                        </label>
                     </div>
                 </nav>
             </div>
@@ -337,10 +378,11 @@
     </footer>
 
     <!-- jquery官方CDN，先載入jquery原始碼，讓瀏覽器看懂，只能選一個版本使用，不可重複使用 -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- 換圖輪播js，必須放在jquery連結下方 -->
     <script src="./Js/carousel.js"></script>
 
-</body >
+</body>
 
 </html>

@@ -1,8 +1,5 @@
-@charset "UTF-8";
-/* UTF-8一定要在行數1 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
-/* google fonts一定要在行數1 */
+@charset "UTF-8";/* UTF-8一定要在行數1 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');/* google fonts一定要在行數2 */
 @font-face {
 	font-family: Bion;
 	src: url(../webfonts/Bion-Bold.otf);
