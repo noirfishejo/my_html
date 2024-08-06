@@ -20,25 +20,35 @@
                 <img src="./images/logo_b_60px.svg" alt="rita-flower-logo">
             </a>
         </h1>
-        <!-- 選單區 -->
-        <nav class="navigation">
-            <!-- icon btn | ul.icon>li*3>a -->
-            <ul class="icon">
-                <li><a class="icon-fb" href="#"></a></li>
-                <li><a class="icon-ig" href="#"></a></li>
-                <li><a class="icon-line" href="#"></a></li>
-                <li><a class="btn-s" href="./login.html">Login</a></li>
-            </ul>
-            <!-- main btn | ul.menu>li*6>a -->
-            <ul class="menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">SERVICE</a></li>
-                <li><a href="#">VIDEO</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </nav>
+        <!-- 漢堡選單 -->
+        <div class="navbar">
+            <!-- 三條槓 -->
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <!-- 選單區 -->
+            <nav class="navigation">
+                <!-- icon btn | ul.icon>li*3>a -->
+                <ul class="icon">
+                    <li><a class="icon-fb" href="#"></a></li>
+                    <li><a class="icon-ig" href="#"></a></li>
+                    <li><a class="icon-line" href="#"></a></li>
+                    <li><a class="btn-s" href="./login.html">Login</a></li>
+                </ul>
+                <!-- main btn | ul.menu>li*6>a -->
+                <ul class="menu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
     <main>
         <!-- 換圖輪播區 -->
@@ -186,6 +196,7 @@
                     </a>
                 </article>
             </div>
+            <a class="btn-s" href="#">more</a>
         </section>
         <!-- 服務項目區 -->
         <section id="service">
@@ -238,6 +249,7 @@
                     </a>
                 </li>
             </ul>
+            <a class="btn-s" href="#">more</a>
         </section>
         <section id="video">
             <header class="title">
@@ -409,9 +421,9 @@
                         <a href="">CONTACT</a>
                         <ul class="submenu">
                             <li><a href="">聯絡方式</a></li>
-                            </li><a href="">交通路線</a></li>
-                        </ul>
-                    </li>
+                    </li><a href="">交通路線</a></li>
+                </ul>
+                </li>
                 </ul>
             </nav>
         </div>
@@ -423,6 +435,8 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- 換圖輪播js，必須放在jquery連結下方 -->
     <script src="./Js/carousel.js"></script>
+    <!-- 自己寫的js必須放在其他套件的最下面 -->
+    <script src="./Js/script.js"></script>
 
 </body>
 
