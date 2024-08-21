@@ -247,16 +247,16 @@ a {
 	filter: drop-shadow(2px 3px rgba(255, 255, 255, 0.6));
 } */
 
+
+/* 漢堡按鈕  */
 .navbar {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 }
 
-/* 漢堡按鈕  */
 .hamburger {
-	/*  修改button在瀏覽器的預設樣式  */
-	/* margin-bottom: 10px; */
+
 	background-color: transparent;
 	border: none;
 }
