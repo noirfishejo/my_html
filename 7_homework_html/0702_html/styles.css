@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: #f0f0f0;
+
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px 25px 70px;
+}
+
+.logo {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.navigation .menu {
+    display: flex;
+    margin-right: 50px;
+}
+
+.navigation .menu a {
+    margin: 8px 20px 8px;
+    color: #000112;
+    font-size: .9rem;
+}
+
+.navigation .menu a:hover {
+    color: #999;
+    transition: .35s ease-in-out;
+}
+
+.navigation .btn {
+    display: flex;
+    align-items: center;
+    border: solid rgb(165, 110, 42) 1px;
+    border-radius: 2px;
+    padding: 3px 20px 2px 25px;
+
+}
+
+.navigation .btn a {
+    color: rgb(165, 110, 42);
+    font-size: .75rem;
+}
+
+.navigation .btn:hover {
+    background-color: rgb(165, 110, 42);
+    transition: .35s ease-in-out;
+}
+
+.navigation .btn a:hover {
+    color: #ffffff;
+    transition: .35s ease-in-out;
+}
+
+.navigation .btn .arrow {
+    display: flex;
+    margin-top: 4px;
+}
+
+.navigation .btn .arrow:hover {
+    color: #ffffff;
+}
