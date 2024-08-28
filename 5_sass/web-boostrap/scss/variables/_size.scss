@@ -1,3 +1,8 @@
+// 響應式斷點
+$media-sm: 'max-width:640px';
+$media-md: 'min-width:768px';
+$media-lg: 'min-width:992px';
+
 // 間距 map-get( $interval ,  );
 $interval: (
     s: 5px,
