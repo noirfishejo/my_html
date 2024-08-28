@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* 共用區 */
+.title {
+  border-left: 5px solid #212529;
+  padding-left: 1rem;
+}
+.title::after {
+  content: "";
+  display: block;
+  background-color: #212529;
+  height: 3px;
+}
+.title h3 {
+  line-height: 1;
+}
+.title h3 span {
+  font-size: 1rem;
+}/*# sourceMappingURL=styles.css.map */

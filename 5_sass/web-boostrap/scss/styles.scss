@@ -1,0 +1,31 @@
+@use 'variables' as *;
+@use 'function' as *;
+
+/* 共用區 */
+// .title::after { //偽元素存在於內容區範圍
+//     content: '';
+//     display: block;
+//     background-color: map-get( $color , dark );
+//     height: 3px;
+// }
+
+.title {
+    @include bordered-l;
+    padding-left: 1rem;
+
+    &::after { //偽元素存在於內容區範圍
+        content: '';
+        display: block;
+        background-color: map-get( $color , dark );
+        height: 3px;
+    }
+    
+    h3 {
+        line-height: 1; // bs預設h3行高為1.2改為1
+        span {
+            font: {
+                size:1rem;
+            }
+        }
+    }
+};
