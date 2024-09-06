@@ -195,6 +195,12 @@ img {
     margin: 0 auto;
 
     .content {
+        padding: $interval-xxl;
+
+        > * {
+            margin-bottom: 1rem;
+        }
+        
         h2 {
             display: inline-block;
             color: map-get($color , light );
@@ -206,7 +212,9 @@ img {
             display: block;
         }
         mark {
-            background-color: map-get($color , mark );;
+            font-weight: 500;
+            font-size: map-get($font-size , l );
+            background-color: map-get($color , mark );
         }
     }
 }

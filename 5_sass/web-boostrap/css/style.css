@@ -137,6 +137,12 @@ img {
   width: 80%;
   margin: 0 auto;
 }
+#tabs .content {
+  padding: 25px;
+}
+#tabs .content > * {
+  margin-bottom: 1rem;
+}
 #tabs .content h2 {
   display: inline-block;
   color: #fffefe;
@@ -147,6 +153,12 @@ img {
 #tabs .content data {
   display: block;
 }
+#tabs .content mark {
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-color: Lime;
+}
+
 .tabs-btn {
   display: flex;
 }
