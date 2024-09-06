@@ -7,6 +7,31 @@ img {
     width: 100%;
 }
 
+/* bs 換圖輪播 */
+.carousel {
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+    .carousel-item {
+        height: calc(100vh - 70px);
+    }
+}
+
+/* 導覽列 */
+.navbar{
+    height: 70px;
+
+    .navbar-brand {
+        img {
+            height: 40px;
+        }
+    }
+    .btn-search {
+        width: 5rem;
+    }
+}
+
 //偽元素存在於內容區範圍
 // .title::after { 
 //     content: '';
