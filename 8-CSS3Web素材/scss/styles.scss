@@ -58,3 +58,11 @@ main{
         }
     }
 }
+
+.photo {
+    position: relative;
+    height: 100%;
+    figure {
+        position: absolute;
+    }
+}
