@@ -11,8 +11,8 @@
 }
 
 @mixin basic-btn {
-    background-color: map-get( $color , primry);
-    color: map-get( $color , light);
+    background-color: map-get( $color , light);
+    color: map-get( $color , black);
     font-weight: 700;
     font-size: map-get( $font-size , xl);
     padding: $interval-m $interval-xxl;

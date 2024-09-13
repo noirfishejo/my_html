@@ -65,4 +65,164 @@ main{
     figure {
         position: absolute;
     }
+    // banner1
+    .mario1 {
+        width: 55%;
+        left:-5%;
+        top: 100vh;
+        animation: mario1 12s 0s ease-in-out both infinite;
+    }
+
+
+
+    @keyframes mario1 {
+        // 0s
+        0%   { top: 100vh; left:-5%; }
+        // 1.2s
+        10%  { top: 10vh;  left:-5%; }
+        // 2.4s
+        20%  { top: 10vh;  left:-5%; }
+        // 3.6s
+        30%  { top: 100vh; left:-5%; }
+        // 12s
+        100% { top: 100vh; left:-5%; }
+    }
+
+    .luigi {
+        width: 45%;
+        top: 25vh;
+        right:12%;
+        animation: luigi 12s 0.35s ease-in-out both infinite;
+    }
+    @keyframes luigi {
+        0%   { top: 100vh; right:12%; }
+        10%  { top: 25vh;  right:12%; }
+        20%  { top: 25vh;  right:12%; }
+        30%  { top: 100vh;  right:12%; }
+        100% { top: 100vh; right:12%; }
+    }
+    .brick {
+        width: 80%;
+        top: 5vh;
+        right:-5%;
+        animation: brick 12s 0.5s ease-in-out both infinite;
+
+    }
+    @keyframes brick {
+    0%   { top: 5vh; right:-100%; }
+    10%  { top: 5vh; right:-5%; }
+    20%  { top: 5vh; right:-5%; }
+    30%  { top: 5vh; right:-100%; }
+    100% { top: 5vh; right:-100%; }
+}
+    // banner2
+    .mario2 {
+        width: 60%;
+        top: 15vh;
+        left:-7%;
+        animation: mario2 12s 4s ease-in-out both infinite;
+        }
+        @keyframes mario2 {
+            // 0s
+            0%   { top: 100vh; left:-7%; }
+            // 1.2s
+            10%  { top: 15vh;  left:-7%; }
+            // 2.4s
+            20%  { top: 15vh;  left:-7%; }
+            // 3.6s
+            30%  { top: 100vh; left:-7%; }
+            // 12s
+            100% { top: 100vh; left:-7%; }
+        }
+    .peach {
+        width: 35%;
+        top: 30vh;
+        right:25%;
+        animation: peach 12s 4.35s ease-in-out both infinite;
+        }
+        @keyframes peach {
+            // 0s
+            0%   { top: 100vh; right:25%; }
+            // 1.2s
+            10%  { top: 30vh;  right:25%; }
+            // 2.4s
+            20%  { top: 30vh;  right:25%; }
+            // 3.6s
+            30%  { top: 100vh; right:25%; }
+            // 12s
+            100% { top: 100vh; right:25%; }
+        }
+    .pipe {
+        width: 40%;
+        top: 5vh;
+        right:2%;
+        animation: pipe 12s 4.5s ease-in-out both infinite;
+        }
+        @keyframes pipe {
+            // 0s
+            0%   { top: 100vh; right:2%; }
+            // 1.2s
+            10%  { top: 5vh;  right:2%; }
+            // 2.4s
+            20%  { top: 5vh;  right:2%; }
+            // 3.6s
+            30%  { top: 100vh; right:2%; }
+            // 12s
+            100% { top: 100vh; right:2%; }
+        }
+        // banner3
+        .mario3 {
+        width: 80%;
+        top: 20vh;
+        left:-12%;
+        animation: mario3 12s 8s ease-in-out both infinite;
+        }
+        @keyframes mario3 {
+            // 0s
+            0%   { top: 100vh; left:-12%; }
+            // 1.2s
+            10%  { top: 20vh;  left:-12%; }
+            // 2.4s
+            20%  { top: 20vh;  left:-12%; }
+            // 3.6s
+            30%  { top: 100vh; left:-12%; }
+            // 12s
+            100% { top: 100vh; left:-12%; }
+        }
+        .toad {
+        width: 35%;
+        top: 30vh;
+        right:22%;
+        animation: toad 12s 8.35s ease-in-out both infinite;
+        }
+        @keyframes toad {
+            // 0s
+            0%   { top: 100vh; right:22%; }
+            // 1.2s
+            10%  { top: 30vh;  right:22%; }
+            // 2.4s
+            20%  { top: 30vh;  right:22%; }
+            // 3.6s
+            30%  { top: 100vh; right:22%; }
+            // 12s
+            100% { top: 100vh; right:22%; }
+        }
+        .star {
+        width: 50%;
+        top: 5vh;
+        right:2%;
+        animation: star 12s 8.5s ease-in-out both infinite;
+        }
+        @keyframes star {
+            // 0s
+            0%   { top: 100vh; right:2%; }
+            // 1.2s
+            10%  { top: 5vh;  right:2%; }
+            // 2.4s
+            20%  { top: 5vh;  right:2%; }
+            // 3.6s
+            30%  { top: 100vh; right:2%; }
+            // 12s
+            100% { top: 100vh; right:2%; }
+        }
 }
