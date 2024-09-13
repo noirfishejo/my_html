@@ -1,0 +1,33 @@
+// 響應式斷點
+$media-sm: 'max-width:640px';
+$media-md: 'min-width:768px';
+$media-lg: 'min-width:992px';
+
+// 間距 map-get( $interval ,  );
+$interval: (
+    s: 5px,
+    m: 10px,
+    l: 15px,
+);
+
+$interval-s: 5px;
+$interval-m: 10px;
+$interval-l: 15px;
+$interval-xxl: 25px;
+$interval-xxxl: 50px;
+
+// 圓角
+$border-radius-s: 4px;
+$border-radius-m: 8px;
+$border-radius-l: 12px;
+$border-radius-xl: 20px;
+$border-radius-full: 99px;
+
+// 最大寬度
+$max-width: (
+    s: 800px,
+    m: 1000px,
+    l: 1200px,
+    xl: 1400px,
+    xxl: 1600px
+);
